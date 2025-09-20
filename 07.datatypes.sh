@@ -9,3 +9,7 @@ NUMBER3=5
 VOLUME=$(($NUMBER1*$NUMBER2*$NUMBER3))
 
 echo "Volume is: ${VOLUME}"
+
+LEADERS=("MODI""TRUMP""PUTIN")
+
+echo "All leaders: ${LEADERS[@]}"
