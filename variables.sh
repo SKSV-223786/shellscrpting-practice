@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #variables
-friend1=sekhar
+friend1=sandeep
 friend2=saidavali
 echo "$friend1 : hi, $friend2 How are you?"
 echo "$friend2 : hi friend1, Fine what about you?"
