@@ -13,5 +13,5 @@ echo "Volume is: ${VOLUME}"
 LEADERS=("MODI", "TRUMP", "PUTIN")
 
 echo "All leaders: ${LEADERS[@]}"
-echo "first leader: ${LEADERS[@2]}"
-echo "second leader: ${LEADERS[@0]}"
+echo "first leaders: ${LEADERS[2]}"
+echo "second leaders: ${LEADERS[0]}"
