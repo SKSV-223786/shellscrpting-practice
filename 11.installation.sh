@@ -25,5 +25,5 @@ dnf remove nginx -y
 VALIDATE $? "nginx"
 #installation of mongodb-mogosh
 
-dnf remove python3 -y
+--nobest remove python3 -y
 VALIDATE $? "python3"
