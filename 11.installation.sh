@@ -8,11 +8,11 @@ if [ $USERID -ne 0 ]; then
 fi
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-        echo "Error: Installing $1 is Failure"
+        echo "Error: Installing $2 is Failure"
         exit 2 
 
     else 
-        echo "installing $1 is success"
+        echo "installing $2 is success"
     fi
 }
 #installation of MYSQL
