@@ -29,11 +29,11 @@ fi
 
 #installation of mongodb-mogosh
 
-dnf install mongodb-mongosh -y
+dnf install python3 -y
  
 if [ $? -ne 0 ]; then
-    echo "ERROR: Installing mongodb-mogosh is failure"
+    echo "ERROR: Installing python3 is failure"
     exit 1
 else    
-    echo "installation of monogodb-mongosh is success"
+    echo "installation of python3 is success"
 fi
