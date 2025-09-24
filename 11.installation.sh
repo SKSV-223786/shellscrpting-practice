@@ -16,14 +16,14 @@ VALIDATE(){
     fi
 }
 #installation of MYSQL
-dnf remove mysql -y
+dnf install mysql -y
 VALIDATE $? "mysql"
 
 #installation of Nginx
 
-dnf remove nginx -y
+dnf install nginx -y
 VALIDATE $? "nginx"
 #installation of mongodb-mogosh
 
---nobest remove python3 -y
+dnf install python3 -y
 VALIDATE $? "python3"
