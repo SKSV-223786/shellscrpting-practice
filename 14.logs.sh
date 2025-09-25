@@ -11,7 +11,7 @@ SCRIPT_NAME=$( echo $0 | cut -d "." -f0 )
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOGS_FOLDER
-echo "script started executed at: $(date)"
+echo "script started executed at: $(date)" | tee -a $LOG_FILE
 if [ $USERID -ne 0 ]; then
     echo " $R Error: Please run this script with root privilege"
     exit 1 # failure is other than 0
@@ -32,7 +32,7 @@ if [ $? -ne 0 ]; then
     dnf install mysql -y &>>$LOG_FILE
     VALIDATE $? "mysql"
 else
-    echo -e "mysql is already exist.....$Y SKIPPING $N"
+    echo -e "mysql is already exist.....$Y SKIPPING $N" | tee -a $LOG_FILE
 fi
 
 #installation of Nginx
@@ -41,7 +41,7 @@ if [ $? -ne 0 ]; then
     dnf install nginx -y &>>$LOG_FILE
     VALIDATE $? "nginx"
 else
-    echo -e "nginx is already exist....$Y Skipping $N"
+    echo -e "nginx is already exist....$Y Skipping $N" | tee -a $LOG_FILE
 fi
 #installation of python3
 dnf list installed python3 &>>$LOG_FILE
@@ -49,7 +49,7 @@ if [ $? -ne 0 ]; then
     dnf install python3 -y &>>$LOG_FILE
     VALIDATE $? "python3"
 else
-    echo -e  "pytho3 is already exist....$Y Skipping $N"
+    echo -e  "pytho3 is already exist....$Y Skipping $N" | tee -a $LOG_FILE
 fi
 
 
