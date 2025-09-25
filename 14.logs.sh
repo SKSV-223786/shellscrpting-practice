@@ -16,6 +16,15 @@ if [ $USERID -ne 0 ]; then
     echo " $R Error: Please run this script with root privilege"
     exit 1 # failure is other than 0
 fi
+VALIDATE(){
+    if [ $1 -ne 0 ]; then
+        echo -e "Error: Installing $2.... $R Failure $N"
+        exit 2 
+
+    else 
+        echo -e "installing $2...  $G success $N"
+    fi
+}
 
 #installation of MYSQL
 dnf list installed mysql &>>$LOG_FILE
