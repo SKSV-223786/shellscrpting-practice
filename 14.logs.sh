@@ -40,7 +40,7 @@ if [ $? -ne 0 ]; then
     dnf install python3 -y &>>$LOG_FILE
     VALIDATE $? "python3"
 else
-    echo -e  "nginx is already exist....$Y Skipping $N"
+    echo -e  "pytho3 is already exist....$Y Skipping $N"
 fi
 
 
