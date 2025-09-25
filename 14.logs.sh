@@ -7,7 +7,7 @@ Y="\e[33m"
 N="\e[0m"
 
 LOGS_FOLDER="/var/log/shell-script"
-SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
+SCRIPT_NAME=$( echo $0 | cut -d "." -f0 )
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOGS_FOLDER
@@ -43,7 +43,7 @@ if [ $? -ne 0 ]; then
 else
     echo -e "nginx is already exist....$Y Skipping $N"
 fi
-#installation of mongodb-mogosh
+#installation of python3
 dnf list installed python3 &>>$LOG_FILE
 if [ $? -ne 0 ]; then
     dnf install python3 -y &>>$LOG_FILE
