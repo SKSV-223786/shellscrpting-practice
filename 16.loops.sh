@@ -13,7 +13,7 @@ LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 mkdir -p $LOGS_FOLDER
 echo "script started executed at: $(date)" | tee -a $LOG_FILE
 if [ $USERID -ne 0 ]; then
-    echo " $R Error: Please run this script with root privilege"
+    echo " $R Error: Please run this script with root privilege $Y "
     exit 1 # failure is other than 0
 fi
 VALIDATE(){
